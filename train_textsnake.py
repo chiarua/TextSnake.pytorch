@@ -188,9 +188,9 @@ def main():
     else:
         pass
 
-    train_loader = data.DataLoader(trainset, batch_size=cfg.batch_size, shuffle=True, num_workers=cfg.num_workers)
+    train_loader = data.DataLoader(trainset, batch_size=cfg.batch_size, shuffle=True, num_workers=cfg.num_workers, generator=torch.Generator(device='cuda'))
     if valset:
-        val_loader = data.DataLoader(valset, batch_size=cfg.batch_size, shuffle=False, num_workers=cfg.num_workers)
+        val_loader = data.DataLoader(valset, batch_size=cfg.batch_size, shuffle=False, num_workers=cfg.num_workers, generator=torch.Generator(device='cuda'))
     else:
         valset = None
 

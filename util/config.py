@@ -7,10 +7,10 @@ config = EasyDict()
 config.num_workers = 4
 
 # batch_size
-config.batch_size = 4
+config.batch_size = 2
 
 # training epoch number
-config.max_epoch = 200
+config.max_epoch = 1
 
 config.start_epoch = 0
 
@@ -24,7 +24,7 @@ config.n_disk = 15
 
 config.output_dir = 'output'
 
-config.input_size = 512
+config.input_size = 256
 
 # max polygon per image
 config.max_annotation = 200
